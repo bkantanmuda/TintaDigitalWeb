@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<!-- =============================================================
+  TINTA DIGITAL — Solusi Digital & Kreatif
+  index.html (rapi dari code.html) + css/style.css + js/main.js
+  Cara demo: klik 2x index.html, atau: npx serve . / VS Code Live Server
+  Desain: DESIGN.md | Logo lokal: assets/logo.png (fallback)
+=============================================================== -->
+
+<html class="scroll-smooth" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>TINTA DIGITAL</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com">
+</script>
+<script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#001946", "outline-variant": "#c4c6d2", "surface-container": "#eaedff", "secondary-container": "#fdb96a", "inverse-primary": "#b1c5ff", "tertiary-fixed-dim": "#ffb59b", "on-tertiary": "#ffffff", "primary-container": "#002c70", "on-tertiary-fixed-variant": "#793014", "tertiary-fixed": "#ffdbcf", "on-surface": "#131b2e", "error-container": "#ffdad6", "tertiary-container": "#5b1b01", "on-tertiary-fixed": "#380d00", "outline": "#747782", "secondary-fixed-dim": "#fdb96a", "surface-container-high": "#e2e7ff", "on-primary-container": "#7996e0", "on-surface-variant": "#444650", "surface-container-low": "#f2f3ff", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#2b1700", "on-secondary": "#ffffff", "on-error-container": "#93000a", "primary-fixed": "#dae2ff", "on-secondary-fixed-variant": "#673d00", "primary-fixed-dim": "#b1c5ff", "surface-bright": "#faf8ff", "surface-tint": "#3e5ca1", "surface-variant": "#dae2fd", "error": "#ba1a1a", "secondary": "#865309", "background": "#faf8ff", "tertiary": "#380d00", "surface-dim": "#d2d9f4", "surface-container-highest": "#dae2fd", "on-tertiary-container": "#de7f5c", "inverse-surface": "#283044", "on-error": "#ffffff", "surface": "#faf8ff", "on-primary": "#ffffff", "on-primary-fixed": "#001946", "on-secondary-container": "#774800", "on-primary-fixed-variant": "#234488", "on-background": "#131b2e", "inverse-on-surface": "#eef0ff", "secondary-fixed": "#ffddba" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "4rem", "gutter": "1.5rem", "margin": "3rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem" }, "fontFamily": { "label-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-md-mobile": [ "Outfit" ], "headline-sm": [ "Outfit" ], "display-hero": [ "Outfit" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Outfit" ], "headline-lg": [ "Outfit" ], "display-hero-mobile": [ "Outfit" ], "headline-md": [ "Outfit" ], "title-md": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-md-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "22px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600" } ], "display-hero": [ "64px", { "lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "headline-lg-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-lg": [ "44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-hero-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-md": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "title-md": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" } ] } } } };</script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="h-20 max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="TINTA DIGITAL Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAu1HhxBk4_KMv_wrZNYQjUv8e3BkiRefAaTx1JVFuZXuYtvk-8DUKp1zNL8LJFgIi6Jew36DQbDBVQhf2-EYWaPqoNckFK319EiniAKI4pneMG3oD3ubRpcjxzHPmI3FPSaMv0fr-Ke7p44Zdd8CN6p2AA51al7XEIRfASMBglL-ZVMGicCEodKXhJhT7ft-pkA1Aa_JKk-QRfdKnvDHYlYrpTom3ddz8EpXuNeLWsQgfs_gDatptFB9z-2uWzzesxQ" onerror="this.onerror=null;this.src='assets/logo.png'">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">TINTA DIGITAL</span>
+</div>
+<nav class="hidden lg:flex items-center gap-8" data-active-classes="text-primary font-semibold">
+<a aria-current="page" class="transition-colors text-primary font-semibold" href="#beranda" data-nav="beranda">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#layanan" data-nav="layanan">Layanan</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#portofolio" data-nav="portofolio">Portofolio</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#printable" data-nav="printable">Printable</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#tentang" data-nav="tentang">Tentang Kami</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#faq" data-nav="faq">FAQ</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-lg shadow-sm hover:bg-primary transition-colors" href="#pesan" data-nav="pesan">Pesan Sekarang</a>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</div>
+<button id="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span id="menu-icon" class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="lg:hidden hidden fixed top-20 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/40 shadow-lg">
+<div class="px-5 py-4 flex flex-col gap-1 max-w-[1280px] mx-auto">
+<a href="#beranda" class="mobile-link px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">Home</a>
+<a href="#layanan" class="mobile-link px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">Layanan</a>
+<a href="#printable" class="mobile-link px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">Printable</a>
+<a href="#portofolio" class="mobile-link px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">Portofolio</a>
+<a href="#tentang" class="mobile-link px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">Tentang Kami</a>
+<a href="#faq" class="mobile-link px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors">FAQ</a>
+<a href="#pesan" class="mobile-link mt-2 inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-lg">Pesan Sekarang<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-surface">
+<div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section id="beranda" class="relative overflow-hidden py-space-xl lg:py-space-2xl bg-surface scroll-mt-24">
+<!-- Decorative Warm Glow Behind Split Composition -->
+<div class="absolute right-0 top-1/4 w-[480px] h-[480px] rounded-full bg-secondary-container/20 blur-[120px] pointer-events-none -z-0">
+</div>
+<div class="absolute left-1/3 -top-24 w-[360px] h-[360px] rounded-full bg-surface-container/60 blur-[100px] pointer-events-none -z-0">
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Column: Editorial Value & Typographic Anchor -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse">
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">TINTA DIGITAL • Creative Studio &amp; Digital Printables</span>
+</div>
+<div class="space-y-4">
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero text-primary tracking-tight">
+              Ide Tidak Harus Berhenti pada Batas yang Ada.
+            </h1>
+<p class="font-headline-sm text-headline-sm text-primary-container font-semibold">
+              Solusi Digital &amp; Kreatif untuk Bisnis dan Generasi Cerdas.
+            </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+              Bangun kehadiran digital yang profesional atau hadirkan aktivitas belajar yang kreatif untuk anak melalui solusi digital TINTA.
+            </p>
+</div>
+<!-- Dual CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2.5 bg-primary-container text-on-primary font-label-lg text-label-lg px-7 py-3.5 rounded-lg shadow-md hover:bg-primary transition-all duration-300 group" href="#layanan">
+<span class="">Buat Landing Page</span>
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2.5 bg-surface-container-low text-secondary font-label-lg text-label-lg px-7 py-3.5 rounded-lg shadow-sm hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all duration-300" href="#printable">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span class="">Lihat Printable Anak</span>
+</a>
+</div>
+<!-- Proof points bar -->
+<div class="pt-6 grid grid-cols-3 gap-4 max-w-lg">
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<p class="font-headline-sm text-headline-sm text-primary font-bold">10 Hari</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Siklus Produksi Cepat</p>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<p class="font-headline-sm text-headline-sm text-primary font-bold">300 DPI</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vektor Siap Cetak</p>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<p class="font-headline-sm text-headline-sm text-primary font-bold">100%</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kustom Non-Template</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Dual Composition Mosaic -->
+<div class="lg:col-span-5 relative mt-8 lg:mt-0">
+<!-- Top Card: Archipelago Coffee Roastery Landing Page Mockup -->
+<div class="relative z-10 w-full bg-surface-container-lowest rounded-xl p-3 shadow-xl transform transition-transform duration-500 hover:-translate-y-1">
+<div class="flex items-center justify-between pb-2 px-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant">
+</span>
+<span class="ml-2 font-label-sm text-label-sm text-outline truncate max-w-[120px]">kopiarchipelago.id</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary">
+</span> Live • 10 Hari Jadi
+              </span>
+</div>
+<div class="relative overflow-hidden rounded-lg aspect-[16/10] bg-primary">
+<img class="w-full h-full object-cover" data-alt="Modern luxury laptop browser mockup displaying Archipelago Indonesian artisan coffee landing page on deep navy and warm gold theme, single origin pour-over coffee carafe and roasted beans, high-end editorial website layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpYEu7YtlPYHE-UmUpLP46uFbOcJhS43k9-eVVPzou-1GHgaGOIOMBaXifQv0UMRJj4V1BsItmcgAjjvxeeoHQ5omg0AxkaGpc9aKm0ujKaE6wHp5fTGacl4OipkSxomdLLjA-YcfA8chGzr1fezqYkcBfi7n72p0dMfOxF75vx4kqy6lX5KgICzTn7OtODmIrRo3BVK-0G7YKfyepx6fjluF_S4YLQTjHc4w3lijO1kT2AERuqkgT">
+</div>
+</div>
+<!-- Bottom Overlapping Card: Educational Printable Worksheet Mockup -->
+<div class="relative -mt-12 ml-6 sm:ml-12 z-20 bg-surface-container-lowest rounded-xl p-3 shadow-2xl transition-transform duration-500 hover:-translate-y-1">
+<div class="flex items-center justify-between pb-2 px-1">
+<span class="font-label-sm text-label-sm font-semibold text-secondary uppercase tracking-wider">Aktivitas Edukatif Prasekolah</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">print</span> PDF A4 Siap Cetak
+              </span>
+</div>
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Charming educational children tracing worksheet flatlay with wooden pencil and crayons, alphabet animal letter tracing cards with alligator cat bear illustrations on soft warm paper background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGG1bTbUHu-PquqhgNrHRJkmfP1YQtyvP06UhqsqR75iPFGkKlncZADHX0JianghzwcO4YCPjBmQmBqD9IMYZl7IQr2q_7K1EeT8tUO-iUpVxukAbkAQpsMgIs8Yy1bU1IyVEmLuCXeMg03WWItXhUZikn2pAQua-aO_zS_6iO_u5XLwaF3EjtMB9s7vHUDIrnbijKO_djjUIyLxut_LAYwEEFDww5J1ChCqlrponUvgEhQqwg-Q9">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TWO CORE SERVICES (PILLARS) -->
+<section class="scroll-mt-24 py-space-2xl bg-surface-container-low" id="layanan" class-scrollfix data-need-scrollmt>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin">
+<div class="max-w-2xl mb-space-xl space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Our Core Pillars</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Dua Cara Kami Mengubah Ide Menjadi Karya.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Menjembatani performa bisnis digital dengan perkembangan edukasi generasi cilik melalui standar estetika tinggi.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- CARD 1: Landing Page Studio -->
+<div class="group bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">devices</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">⚡ Estimasi: 10 Hari</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-1">Layanan Pengembangan Web</p>
+<h3 class="font-headline-md text-headline-md text-primary">Landing Page</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Landing page sederhana, profesional, dan terarah untuk bisnis, personal brand, event, dan kebutuhan lainnya yang dirancang khusus untuk melipatgandakan konversi leads.
+              </p>
+</div>
+<ul class="space-y-3 pt-2">
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="">High-Converting UI/UX Design &amp; Copywriting Terarah</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="">Mobile Responsive &amp; Kecepatan Load Teroptimasi</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="">Integrasi Domain Pribadi, WhatsApp CTA &amp; Lynk.id</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<a class="inline-flex items-center justify-between w-full p-4 rounded-lg bg-surface-container text-primary font-label-lg text-label-lg group-hover:bg-primary-container group-hover:text-on-primary transition-colors" href="#landing-page-showcase">
+<span class="">Pelajari Layanan Landing Page</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 2: Printable Studio -->
+<div class="group bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">palette</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">🎨 Instant Download</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-1">Produk Edukasi Anak</p>
+<h3 class="font-headline-md text-headline-md text-primary">Printable Anak</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Aktivitas edukatif siap cetak untuk mewarnai, tracing, mengenal angka dan huruf, mencocokkan gambar, dan eksplorasi sensori kreatif tanpa ketergantungan layar gadget.
+              </p>
+</div>
+<ul class="space-y-3 pt-2">
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="">Format High-Res PDF (300 DPI Siap Cetak Rumahan)</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="">Desain Hangat, Menenangkan &amp; Sesuai Kurikulum Balita</span>
+</li>
+<li class="flex items-center gap-3 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="">Khusus Prasekolah &amp; TK (Rentang Usia 2–7 Tahun)</span>
+</li>
+</ul>
+</div>
+<div class="pt-8">
+<a class="inline-flex items-center justify-between w-full p-4 rounded-lg bg-surface-container text-primary font-label-lg text-label-lg group-hover:bg-secondary group-hover:text-on-secondary transition-colors" href="#printable">
+<span class="">Eksplorasi Katalog Printable</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VALUE PROPOSITION (T-I-N-T-A) -->
+<section id="tentang" class="py-space-2xl bg-surface scroll-mt-24">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-xl space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">DNA KAMI</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Mengapa TINTA DIGITAL?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Filosofi akronim T-I-N-T-A yang menjadi komitmen tak tergoyahkan di balik setiap pixel dan setiap lembar karya edukasi.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- T -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center font-display-hero text-headline-md text-primary font-bold group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+              T
+            </div>
+<h3 class="font-title-md text-title-md text-primary font-semibold">Tepat Guna</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Solusi efisien dan praktis yang fokus langsung memecahkan tantangan digital dan kebutuhan edukasi anak.
+            </p>
+</div>
+<div class="mt-4 pt-3 flex items-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<!-- I -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center font-display-hero text-headline-md text-primary font-bold group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+              I
+            </div>
+<h3 class="font-title-md text-title-md text-primary font-semibold">Inovatif</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Menggabungkan estetika seni editorial kontemporer dengan performa teknologi digital masa kini.
+            </p>
+</div>
+<div class="mt-4 pt-3 flex items-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+</div>
+<!-- N -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center font-display-hero text-headline-md text-primary font-bold group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+              N
+            </div>
+<h3 class="font-title-md text-title-md text-primary font-semibold">Nalar &amp; Nurture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Mendorong perkembangan nalar kognitif anak sekaligus merawat pertumbuhan bisnis jangka panjang.
+            </p>
+</div>
+<div class="mt-4 pt-3 flex items-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+</div>
+<!-- T -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center font-display-hero text-headline-md text-primary font-bold group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+              T
+            </div>
+<h3 class="font-title-md text-title-md text-primary font-semibold">Terjangkau</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Kualitas agensi kelas atas dengan struktur investasi yang bersahabat bagi UMKM dan keluarga muda.
+            </p>
+</div>
+<div class="mt-4 pt-3 flex items-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">savings</span>
+</div>
+</div>
+<!-- A -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center font-display-hero text-headline-md text-primary font-bold group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+              A
+            </div>
+<h3 class="font-title-md text-title-md text-primary font-semibold">Adaptif</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Fleksibel dalam merespon dinamika algoritma pasar digital serta tren kurikulum tumbuh kembang anak.
+            </p>
+</div>
+<div class="mt-4 pt-3 flex items-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LANDING PAGE SERVICE SHOWCASE -->
+<section class="scroll-mt-24 py-space-2xl bg-surface-container-low" id="landing-page-showcase" class-scrollfix data-need-scrollmt>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin space-y-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+<div class="lg:col-span-8 space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Web Architecture &amp; Conversion</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Buat Bisnismu Punya Rumah di Dunia Digital.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Desain website fungsional yang dirancang khusus untuk meningkatkan kepercayaan pelanggan dan melipatgandakan konversi penjualan tanpa kerumitan teknis.
+          </p>
+</div>
+<div class="lg:col-span-4 lg:text-right">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-lg shadow-sm hover:bg-primary transition-all" href="#pesan">
+<span class="">Mulai Project Sekarang</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Large Realistic Browser Showcase Mockup -->
+<div class="bg-surface-container-lowest rounded-xl p-4 lg:p-6 shadow-xl">
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error">
+</span>
+<span class="w-3 h-3 rounded-full bg-secondary-container">
+</span>
+<span class="w-3 h-3 rounded-full bg-outline-variant">
+</span>
+</div>
+<div class="bg-surface-container px-6 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="">https://kopiarchipelago.id</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span class="material-symbols-outlined text-[18px]">share</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-lg aspect-[21/9] bg-primary">
+<img class="w-full h-full object-cover" data-alt="High resolution realistic digital showcase of an Indonesian artisan coffee roastery landing page, featuring luxury typography, amber coffee beans, pourover equipment, and clear shop call to action on deep midnight navy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1KAL1h_9xiLKo-alUT64J_g-Jvrxoh7wPJ2cqv6sZjTRpejDcVPwEArxrtLiG6Lr6YAjZ0RS8rmdjMbEIcpO7upvGyYvStioHg3SD_GZBIe1Z9MLY3qijBgefwWMsPwhyefb--SDdt1Vxv3S2gJcOCgtjMi5_vOwGYelAOHFQqhZfcCWQ0MYZ5eH8nMqBajuXDayrPDdSIGR0HXbzHT7DW6xsO_cD2gswlnnALVu4RzIt2K6tyTRH">
+</div>
+</div>
+<!-- Grid of 8 Service Benefits -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-5 bg-surface-container-lowest rounded-lg shadow-sm space-y-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">responsive_layout</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Responsive Design</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tampil proporsional dan sempurna di layar smartphone, tablet, maupun monitor desktop.</p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-lg shadow-sm space-y-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">brush</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Custom Visual Design</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bukan template klise. Disesuaikan dengan tone of voice dan identitas visual unik brand Anda.</p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-lg shadow-sm space-y-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">ads_click</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Clear CTA</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Struktur alur pembaca yang mengarahkan pengunjung langsung ke WhatsApp atau transaksi.</p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-lg shadow-sm space-y-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Social Media Integration</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sinkronisasi mulus ke akun Instagram, TikTok, katalog Lynk.id, serta kanal pesan instan.</p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-lg shadow-sm space-y-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Business-Focused Layout</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Arsitektur informasi teruji yang mengutamakan edukasi produk dan penutupan prospek.</p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-lg shadow-sm space-y-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Professional Appearance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kesan berkelas yang seketika menaikkan kredibilitas bisnis Anda di hadapan mitra dan calon klien.</p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-lg shadow-sm space-y-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">10-Day Production</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Alur kerja gesit dan terukur. Website Anda siap beroperasi dalam hitungan hari, bukan bulan.</p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-lg shadow-sm space-y-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">SEO &amp; Speed Optimized</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kode ramping bebas bloatware yang memastikan loading cepat dan ramah perayap Google.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PRINTABLE PRODUCTS SHOWCASE (WITH INTERACTIVE FILTER) -->
+<section class="scroll-mt-24 py-space-2xl bg-surface" id="printable" class-scrollfix data-need-scrollmt>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin space-y-space-xl">
+<div class="text-center max-w-2xl mx-auto space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Printable Studio</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Belajar Bisa Seseru Bermain.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Materi aktivitas edukatif kreatif yang dirancang penuh kasih untuk menstimulasi motorik halus dan daya imajinasi anak usia 2 hingga 7 tahun.
+        </p>
+</div>
+<!-- Interactive Filter Pills -->
+<div class="flex items-center justify-center flex-wrap gap-2" id="printable-filter-group">
+<button class="printable-pill px-4 py-2 rounded-full font-label-lg text-label-lg bg-primary-container text-on-primary transition-all shadow-sm" data-filter="all" type="button">Semua</button>
+<button class="printable-pill px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="mewarnai" type="button">Mewarnai</button>
+<button class="printable-pill px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="tracing" type="button">Tracing</button>
+<button class="printable-pill px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="huruf" type="button">Mengenal Huruf</button>
+<button class="printable-pill px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="angka" type="button">Mengenal Angka</button>
+<button class="printable-pill px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="matching" type="button">Matching</button>
+<button class="printable-pill px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="aktivitas" type="button">Aktivitas Anak</button>
+</div>
+<!-- 6 Printable Product Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="printable-grid">
+<!-- Product 1 -->
+<div class="printable-card bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="tracing huruf">
+<div class="space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High resolution children alphabet tracing cards showing letter A for Alligator, letter B for Bear, cute animal illustrations with clean dashed lines for handwriting practice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4_2Jxh-38qmmrCjPB0kc39GHmhApL1zGd1B8qZzZlc4Tod-T4Vi_0oZSWuQlrk85Sy_zUE0YaqKc9LQF7uiOaADAtuEIXQRziCIYibs4p7XYOSFnXl8EhEtVvdXLh3zBJ_X_BiynIXhwWj8IREhtXUrdd19wjNg88822T4v5SvkZdUCZzjtBdhkMi4JPAC9MullqH5OrHwTpjmUD4mRBG-WpwXbFPJuO4HLRNkn4DtzzbqRFapqrr">
+<span class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-1 rounded-full shadow-sm font-bold">Bestseller</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Tracing &amp; Huruf</span>
+<h3 class="font-title-md text-title-md text-primary font-bold mt-1">Lembar Tracing Alfabet &amp; Hewan Ceria</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">26 lembar latihan motorik halus tracing huruf A-Z dengan ilustrasi fauna lucu dan garis penuntun rapi.</p>
+</div>
+</div>
+<div class="pt-5 mt-4 flex items-center justify-end">
+<a class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-primary transition-colors" href="Contoh.pdf" target="_blank" rel="noopener">
+<span class="">Lihat PDF</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</a>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="printable-card bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="mewarnai aktivitas">
+<div class="space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Kids coloring book page layout featuring gentle sea creatures turtles whales and coral reef with thick clean outlines suited for toddler crayons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDprUsz4Ae5GtzRjcXEBdeiW8hT9e24Im92oZExaKvcij8C8q1w_jVqGgC-N_7Nvv-gV5uOoaM_Cx_4TWbSQB6fu-whFbClxYrXWm4Zr7jOGc13-CWbKOi0oEgdBMVYiBtNPV-oTwtGt6VGkJgOHfW9GBR2zzFTrRerDUOp29Ow0U0QsXlQBd02iSBcuXAzGITzqWO1t0mQw1nhZdrBUucymc2OV_7tjB_iy4E4vHuxFMcXaOPEr2OC">
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Mewarnai</span>
+<h3 class="font-title-md text-title-md text-primary font-bold mt-1">Buku Mewarnai Petualangan Dunia Laut</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">30 halaman ilustrasi biota laut ramah anak dengan garis tebal yang memudahkan stimulasi warna si kecil.</p>
+</div>
+</div>
+<div class="pt-5 mt-4 flex items-center justify-end">
+<a class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-primary transition-colors" href="Contoh.pdf" target="_blank" rel="noopener">
+<span class="">Lihat PDF</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</a>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="printable-card bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="angka aktivitas">
+<div class="space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Children math learning printable sheet counting numbers 1 to 20 with apples wooden blocks and fun counting puzzles designed for early childhood development" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU6T42yujLDeljdIUvCCGWAEJhiTdxOBfc5UaqBGqpxfHnHX71JKDAvtHFaGhx4Tn4IvyafvFk9m4_4V-HNMFQEnTtUi469fG_iLdGE6v5FHohEj28vufAtjHguj9h2jY6D39oMq9_6K9R2WFfl4DBuI9HM8-GHNzI_tLB3fdacwNDsbHMYea6J7HKJSvMLdf2bflqkq5xHy1EbNy6wNH7DETBsclLfcDEyv_rs7uH1KUwAAZt6PKr">
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Mengenal Angka</span>
+<h3 class="font-title-md text-title-md text-primary font-bold mt-1">Paket Berhitung &amp; Mengenal Angka 1-20</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">Aktivitas menghitung kuantitas benda, mencocokkan jumlah, dan tracing angka secara interaktif.</p>
+</div>
+</div>
+<div class="pt-5 mt-4 flex items-center justify-end">
+<a class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-primary transition-colors" href="Contoh.pdf" target="_blank" rel="noopener">
+<span class="">Lihat PDF</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</a>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="printable-card bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="matching">
+<div class="space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Preschool matching activity worksheet connecting animals to silhouettes and geometric shape shadows with clean aesthetic vector styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAwG08jpr7KVKNNF-tsVM0v6Lsa8H09neSJ30eyBh-tOjXHZycRmcrBmiADuStHYesyh6cwHzEwJvz8yRxQzV-HyfbcDsThIVWcpbW0abztptvJuzSptndR4AN9z1bci1rLahgHN9OqxF57SXoud2wqKtN14TQgIPpRvPRmHeBb2vc8bpPeGCZoYgJERWxOTO3GKDdPA2B3Yyt1Ozz3cCPtprHsipiW8tQEBLExfpq20WiP3vwP1HA">
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Matching &amp; Logika</span>
+<h3 class="font-title-md text-title-md text-primary font-bold mt-1">Mencocokkan Pola &amp; Bayangan Logika</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">Melatih ketajaman visual, daya konsentrasi, pengenalan bentuk geometris, serta logika dasar balita.</p>
+</div>
+</div>
+<div class="pt-5 mt-4 flex items-center justify-end">
+<a class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-primary transition-colors" href="Contoh.pdf" target="_blank" rel="noopener">
+<span class="">Lihat PDF</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</a>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="printable-card bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="aktivitas">
+<div class="space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Charming child daily routine journal sheet with morning habits tracker teeth brushing bedtime story checklist and cheerful watercolor reward stickers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjpDKfyJo_Da1rOLo70-L9Gt4ON0XxsihYluMxiVE7nmMrCAh0Bjr57Gm2yXzReiSJppFZJtdhCJp2CJ_F8WpW_00Vk0ekb5AIaDMV8VM_TMdh7PZZ_SWMVVmpQkkQnjJ5Sz1SvilA3Zaa2kM2zYlb4D_fA7Bv0O9P_GqXFnl2c6avBEvAleb4WXrFtuczXK0LDaz0loR-dqONcj9RPZPfZjfHVZ2N_rLxUj-CljEDmy54rYX4vsZl">
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Aktivitas Anak</span>
+<h3 class="font-title-md text-title-md text-primary font-bold mt-1">Jurnal Aktivitas Harian Prasekolah</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">Panduan pembiasaan adab baik, tracker mandiri stiker mandi &amp; sikat gigi, serta rangsangan kreativitas harian.</p>
+</div>
+</div>
+<div class="pt-5 mt-4 flex items-center justify-end">
+<a class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-primary transition-colors" href="Contoh.pdf" target="_blank" rel="noopener">
+<span class="">Lihat PDF</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</a>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="printable-card bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="huruf aktivitas">
+<div class="space-y-4">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Printable bilingual Indonesian English illustrated flashcards showing fruits household items and transportation with cut line guides" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4xV7l-kvj27Yu_UuHLAJ4XUV05jFGI6QjsRT9BV-chmwluqeXrafuPe4EnLlpg4QLGmwbSjEPUHoYFu67RMxb5hyN0Hj7MXkYiTzs0TbY2QK5ukpaRyFfoQpPfHiKkFka1vXs6fGtUsj8T-1ME5f2oXOf5l7Bc4dAcgiNQ_IJoDCsgp6W-y_gBM56ze2SYIWjLZN5S0tS6p9giCpuDuuobIDeTq6MlzRu_uIsWkm1aYPn0Mc8Vaxb">
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Mengenal Huruf &amp; Kata</span>
+<h3 class="font-title-md text-title-md text-primary font-bold mt-1">Kartu Kosakata Bergambar (Flashcard)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">50 kartu edukasi dwibahasa (Indonesia - Inggris) dengan ilustrasi elegan yang siap dicetak dan digunting.</p>
+</div>
+</div>
+<div class="pt-5 mt-4 flex items-center justify-end">
+<a class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-primary transition-colors" href="Contoh.pdf" target="_blank" rel="noopener">
+<span class="">Lihat PDF</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PORTFOLIO SHOWCASE -->
+<section class="scroll-mt-24 py-space-2xl bg-surface-container-low" id="portofolio" class-scrollfix data-need-scrollmt>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin space-y-space-xl">
+<div class="max-w-2xl space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Selected Works</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Karya yang Kami Buat.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Koleksi proyek landing page terpilih yang telah membantu klien menjangkau audiens lebih luas dan membangun otoritas bisnis online.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Portfolio 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+<div class="p-4 bg-surface-container-high/50 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant">
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Case Study • F&amp;B</span>
+</div>
+<div class="relative overflow-hidden aspect-[16/10] bg-primary">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury dark navy and gold website mockup for Indonesian specialty coffee bean roaster showing origins tasting notes and order CTA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9WGENFJ7P7rP5-dLoedcPK38q0HvJiXuYF83XCuVvl5oGP6IO9B-KBnrov1AvHxV-YIvVgF503SjW0QyTKos__RXtMqdBZBeLj3s1xuUwmoNxotBk1nTZoL0kWVqH2pIYH44sCxxYOxF8Gjssl2mPDEMjKJIBCGDukTHXS9WCHpkGTro4mJKNrvMnqRafTnc_1jqfPjA_HIZO4rXZs8Kg5ye3Ai_VO1NLuoGUBVdLOnrcIIsiBwJL">
+</div>
+<div class="p-6 space-y-3">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">Landing Page</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">F&amp;B</span>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Online Ordering</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Archipelago Artisan Coffee Roastery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Website storytelling dengan nuansa luxury navy &amp; warm gold untuk roastery kopi lokal nusantara, mendongkrak pesanan via WhatsApp hingga 40%.</p>
+</div>
+</div>
+<!-- Portfolio 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+<div class="p-4 bg-surface-container-high/50 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant">
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Case Study • Healthcare</span>
+</div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Clean minimal medical doctor personal branding landing page layout with appointment booking button and professional profile credentials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbWTSANQSW3XEM4-gZ2KLMQHlDZEKXAqL1jllnBQ7SH1JOm5NHT5b376q9ARACceTeocEeevfKzS0rZelyrxYlLg1r8gWiDFrOOF19ElUmPrWNCk1ZWdU_dV_M5VkD4LqtpeTnavbyYlftJaAwHbu3fk4MiNQChrYINDwoPoOVueSVcl_zRzNahY1oljWWTV3R-ZT41YsAzTOpQ7k9vUdRjjPoe61Nd-5X3lK4np3dR9V4SNkolEf2">
+</div>
+<div class="p-6 space-y-3">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">Personal Brand</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">Healthcare</span>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Booking</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Dr. Arisandi Portfolio &amp; Konsultasi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Profil kredibilitas dokter spesialis anak dengan sistem penjadwalan konsultasi privat otomatis langsung ke perawat klinik pendamping.</p>
+</div>
+</div>
+<!-- Portfolio 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+<div class="p-4 bg-surface-container-high/50 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant">
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Case Study • Event</span>
+</div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vibrant modern creative summit conference registration page featuring speaker schedule interactive ticket countdown and clear register buttons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPZB12o95vTJmJfmucAtgVwaYwMG_BByAevsTV6m7W9WFmP-GXLTClMctx3WBfC4Q67Flq0dNQ99BDVZJ-T5psdanKsTBNtwALkxM8j2JiOzfLWqLYJ0T4UFsGL_v93BcBirFpIISj7ooIlD-8R9zme_DT4xqMXKz5uEqz3PIGT57DDehCoiSTF2QPvqe4LguScvsIR-H-_mqsOvTPillPHFVkJuWr0vpu_8dBx2uZllhQ5_u4MFhg">
+</div>
+<div class="p-6 space-y-3">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">Event</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">Ticketing</span>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">High Conversion</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Nusantara Creative Summit 2026</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Halaman pendaftaran tiket festival industri kreatif berskala nasional dengan countdown timer interaktif dan formulir presale cepat.</p>
+</div>
+</div>
+<!-- Portfolio 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+<div class="p-4 bg-surface-container-high/50 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container">
+</span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant">
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Case Study • UMKM</span>
+</div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal woven textile craft digital catalog website with elegant photography of handwoven fabric and streamlined order integration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN0u1acqDXbULE_8so-27_TVbSayQdy2zboRHG9RseKP0Ax2GN7gr9cIUB88QdlTsX0X6C3wR_eoL0T9UxdDLbcwfYIBWsoGVesJ3pE3tNrTIvzcQbHNc-yV07mHt09lDVJ1Nw5osu-t4KXwP8mtyzKg58sNHrMKfBftiljxLR1qPwWiTcWRdMStAFpgIj5iooiddedUUTEXP4zTZ259P9MsG_w34O1x5NtPpNLaRdYrl1_gRbdeP0">
+</div>
+<div class="p-6 space-y-3">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">UMKM</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">E-Commerce Catalog</span>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Lynk.id</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Kriya Tenun Nusantara</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Katalog digital terintegrasi tautan Lynk.id bagi kelompok perajin tenun ikat tradisional untuk mempermudah transaksi pembeli mancanegara.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS SECTION -->
+<section class="py-space-2xl bg-surface">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin space-y-space-xl">
+<div class="text-center max-w-2xl mx-auto space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Kisah Nyata</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Cerita dari Mereka.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Pengalaman nyata dari pemilik bisnis, penggiat acara, dan para orang tua yang telah merasakan dedikasi TINTA DIGITAL.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Landing page dari TINTA DIGITAL berhasil meningkatkan closing rate WhatsApp bisnis kopi kami hingga 40%. Desainnya sangat berkelas dan pengerjaannya tepat 10 hari!"
+            </p>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Hendra Wijaya</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Co-Founder Archipelago Coffee</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Printable tracing dan mewarnainya sangat rapi, anak saya usia 4 tahun betah berlama-lama belajar tanpa rewel minta gadget. Kualitas cetaknya tajam dan ramah anak."
+            </p>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Sarah Amanda</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ibu Rumah Tangga &amp; Homeschooler</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Sangat responsif dan komunikatif. Halaman event kami terlihat sangat kredibel dan proses registrasi peserta berlangsung lancar tanpa kendala teknis."
+            </p>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Dimas Prasetyo</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Project Lead Creative Expo</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ ACCORDION SECTION -->
+<section class="scroll-mt-24 py-space-2xl bg-surface-container-low" id="faq" class-scrollfix data-need-scrollmt>
+<div class="max-w-[840px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin space-y-space-xl">
+<div class="text-center space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Bantuan &amp; Panduan</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Pertanyaan yang Sering Diajukan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Temukan jawaban cepat seputar pemesanan landing page maupun pembelian printable anak.</p>
+</div>
+<div class="space-y-3" id="faq-accordion-group">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button aria-expanded="false" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-title-md text-title-md text-primary font-semibold hover:text-secondary transition-colors" type="button">
+<span class="">Berapa lama pengerjaan landing page?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 font-body-md text-body-md text-on-surface-variant">
+            Estimasi standar pengerjaan adalah 10 hari kerja terhitung sejak materi (teks, foto, dan logo) diterima lengkap. Kami juga menyediakan opsi express jika dibutuhkan kebutuhan peluncuran mendesak.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button aria-expanded="false" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-title-md text-title-md text-primary font-semibold hover:text-secondary transition-colors" type="button">
+<span class="">Apakah desain landing page bisa disesuaikan?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 font-body-md text-body-md text-on-surface-variant">
+            Tentu! Semua landing page didesain secara custom menyesuaikan identitas brand, warna, tipografi, dan target audiens bisnis Anda tanpa memakai template pasaran umum.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button aria-expanded="false" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-title-md text-title-md text-primary font-semibold hover:text-secondary transition-colors" type="button">
+<span class="">Apa saja yang dibutuhkan untuk membuat landing page?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 font-body-md text-body-md text-on-surface-variant">
+            Cukup siapkan informasi profil bisnis, deskripsi produk/layanan, foto produk (jika ada), serta kontak WhatsApp tujuan pemesanan. Tim kami siap mendampingi dan membantu menyusun struktur copywriting bila belum lengkap.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button aria-expanded="false" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-title-md text-title-md text-primary font-semibold hover:text-secondary transition-colors" type="button">
+<span class="">Apakah printable langsung siap dicetak?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 font-body-md text-body-md text-on-surface-variant">
+            Ya! File dikirim dalam format PDF beresolusi tinggi (300 DPI) standar ukuran A4 yang siap langsung Anda cetak menggunakan printer rumahan biasa maupun dibawa ke percetakan terdekat.
+          </div>
+</div>
+<!-- FAQ 5 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button aria-expanded="false" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-title-md text-title-md text-primary font-semibold hover:text-secondary transition-colors" type="button">
+<span class="">Format file printable apa yang tersedia?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 font-body-md text-body-md text-on-surface-variant">
+            Seluruh lembar aktivitas anak kami sediakan dalam format PDF vektor berdefinisi tinggi agar hasil cetak tetap tajam, cerah, tidak buram, dan garis tracing nyaman diikuti anak.
+          </div>
+</div>
+<!-- FAQ 6 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button aria-expanded="false" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-title-md text-title-md text-primary font-semibold hover:text-secondary transition-colors" type="button">
+<span class="">Bagaimana cara melakukan pemesanan?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 font-body-md text-body-md text-on-surface-variant">
+            Untuk landing page, klik tombol 'Pesan Landing Page' atau hubungi WhatsApp kami untuk konsultasi gratis. Untuk produk printable, Anda dapat memilih produk dan mengunduhnya seketika via katalog online kami atau tautan Lynk.id resmi TINTA.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ORDER FORM (tambah: form -> WhatsApp) -->
+<section id="order" class="py-space-2xl bg-surface scroll-mt-24">
+<div class="max-w-[840px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin">
+<div class="bg-surface-container-lowest rounded-xl p-6 lg:p-8 shadow-sm">
+<div class="space-y-2 mb-6">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Form Cepat</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Ceritakan Kebutuhanmu.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Isi form singkat ini, pesanmu akan diteruskan otomatis ke WhatsApp kami.</p>
+</div>
+<form id="order-form" class="grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
+<div class="flex flex-col gap-1.5">
+<label for="order-nama" class="font-label-lg text-label-lg text-primary">Nama</label>
+<input id="order-nama" name="nama" type="text" required placeholder="cth: Budi Santoso" autocomplete="name" class="form-input" />
+</div>
+<div class="flex flex-col gap-1.5">
+<label for="order-kebutuhan" class="font-label-lg text-label-lg text-primary">Kebutuhan</label>
+<select id="order-kebutuhan" name="kebutuhan" class="form-input">
+<option value="Landing Page">Landing Page (10 hari jadi)</option>
+<option value="Printable Anak">Printable Anak (instant download)</option>
+<option value="Konsultasi gratis">Konsultasi gratis dulu</option>
+</select>
+</div>
+<div class="sm:col-span-2 flex flex-col gap-1.5">
+<label for="order-pesan" class="font-label-lg text-label-lg text-primary">Pesan singkat</label>
+<textarea id="order-pesan" name="pesan" rows="3" placeholder="cth: Saya butuh landing page untuk kopi susu kemasan 250ml, target reseller..." class="form-input">
+</textarea>
+</div>
+<p id="order-error" class="sm:col-span-2 hidden font-body-sm text-body-sm text-error" role="alert">Mohon isi nama dan pesan singkat dulu ya.</p>
+<div class="sm:col-span-2 flex flex-wrap items-center gap-3 pt-1">
+<button type="submit" class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg text-label-lg px-7 py-3.5 rounded-lg shadow-md hover:bg-primary transition-all">
+<span>Kirim via WhatsApp</span>
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<span class="font-body-sm text-body-sm text-on-surface-variant">atau langsung: <a class="underline hover:text-primary" href="https://wa.me/6281234567890" target="_blank" rel="noopener">wa.me/6281234567890</a>
+</span>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- FINAL CTA SECTION (Strong Navy Background with Warm Gold Accents) -->
+<section class="scroll-mt-24 py-space-2xl bg-primary text-on-primary relative overflow-hidden" id="pesan" class-scrollfix data-need-scrollmt>
+<!-- Ambient gold blur accents inside parent -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-secondary-container/15 blur-[100px] pointer-events-none">
+</div>
+<div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-primary-container/40 blur-[80px] pointer-events-none">
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin relative z-10 text-center space-y-8">
+<div class="max-w-2xl mx-auto space-y-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold">Langkah Selanjutnya</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary tracking-tight">Punya Ide? Mari Wujudkan.</h2>
+<p class="font-body-lg text-body-lg text-surface-container-highest max-w-xl mx-auto">
+          Mulai dari sebuah ide sederhana hingga menjadi karya digital yang siap digunakan dan memberi dampak nyata.
+        </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-4">
+<a class="inline-flex items-center gap-2.5 bg-secondary-container text-on-secondary-container font-label-lg text-label-lg px-8 py-4 rounded-lg shadow-lg hover:bg-secondary-fixed transition-all font-bold" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="">Pesan Landing Page</span>
+</a>
+<a class="inline-flex items-center gap-2.5 bg-surface-container-lowest/10 text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-lg hover:bg-surface-container-lowest/20 transition-all" href="#printable">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span class="">Jelajahi Printable</span>
+</a>
+</div>
+<!-- Trust Badges -->
+<div class="pt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-12 font-label-sm text-label-sm text-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">verified</span>
+<span class="">Konsultasi Gratis</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">cached</span>
+<span class="">Garansi Revisi Terarah</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">bolt</span>
+<span class="">Pengiriman Cepat &amp; Tepat</span>
+</div>
+</div>
+</div>
+</section>
+<!-- PROFESSIONAL BRAND FOOTER BLOCK (Extends shell layout harmoniously) -->
+<section class="py-space-xl bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-8 space-y-2">
+<h4 class="font-title-md text-title-md text-primary font-bold">TINTA DIGITAL</h4>
+<p class="font-body-md text-body-md text-secondary font-medium">Solusi Digital &amp; Kreatif untuk Bisnis dan Generasi Cerdas.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"Ide Tidak Harus Berhenti pada Batas yang Ada."</p>
+</div>
+<div class="md:col-span-4 flex items-center md:justify-end gap-3">
+<a class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-colors" href="https://www.instagram.com/tintadigitalll?utm_source=ig_web_button_share_sheet&amp;cplk=ZDNlZDc0MzIxNw==" rel="noopener noreferrer" target="_blank" title="Instagram">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-colors" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank" title="WhatsApp">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-colors" href="mailto:tintadigital69@gmail.com" title="Email">>
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-colors" href="https://lynk.id/tintadigital" rel="noopener noreferrer" target="_blank" title="Lynk.id">
+<span class="material-symbols-outlined text-[20px]">link</span>
+</a>
+</div>
+</div>
+<div class="pt-8 mt-6 text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          © <span id="year">2026</span> TINTA DIGITAL — Dibuat dengan dedikasi untuk kemajuan bisnis UMKM &amp; pendidikan kreatif anak Indonesia.
+        </p>
+</div>
+</div>
+</section>
+</div>
+<button id="back-to-top" type="button" aria-label="Kembali ke atas" class="back-to-top" title="Kembali ke atas">
+<span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+</button>
+<script src="js/main.js">
+</script>
+</main>
+</main>
+<footer class="w-full bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-space-xl lg:px-margin py-space-2xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl">
+<div class="md:col-span-1 space-y-4">
+<div class="flex items-center gap-3">
+<img alt="TINTA DIGITAL Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAu1HhxBk4_KMv_wrZNYQjUv8e3BkiRefAaTx1JVFuZXuYtvk-8DUKp1zNL8LJFgIi6Jew36DQbDBVQhf2-EYWaPqoNckFK319EiniAKI4pneMG3oD3ubRpcjxzHPmI3FPSaMv0fr-Ke7p44Zdd8CN6p2AA51al7XEIRfASMBglL-ZVMGicCEodKXhJhT7ft-pkA1Aa_JKk-QRfdKnvDHYlYrpTom3ddz8EpXuNeLWsQgfs_gDatptFB9z-2uWzzesxQ" onerror="this.onerror=null;this.src='assets/logo.png'">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">TINTA</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ide Tidak Harus Berhenti pada Batas yang Ada. Studio kreatif digital strategis dan penerbit media printable edukasi premium.</p>
+</div>
+<div class="space-y-3">
+<h4 class="font-label-lg text-label-lg text-primary">Layanan Studio</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+<li class="">
+<a class="hover:text-primary transition-colors" href="#layanan" data-nav="layanan">Brand Strategy</a>
+</li>
+<li class="">
+<a class="hover:text-primary transition-colors" href="#layanan" data-nav="layanan">Digital Architecture</a>
+</li>
+<li class="">
+<a class="hover:text-primary transition-colors" href="#layanan" data-nav="layanan">Editorial Direction</a>
+</li>
+</ul>
+</div>
+<div class="space-y-3">
+<h4 class="font-label-lg text-label-lg text-primary">Printable Studio</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+<li class="">
+<a class="hover:text-primary transition-colors" href="#printable" data-nav="printable">Educational Kits</a>
+</li>
+<li class="">
+<a class="hover:text-primary transition-colors" href="#printable" data-nav="printable">Activity Bundles</a>
+</li>
+<li class="">
+<a class="hover:text-primary transition-colors" href="#printable" data-nav="printable">Parenting Guides</a>
+</li>
+</ul>
+</div>
+<div class="space-y-3">
+<h4 class="font-label-lg text-label-lg text-primary">Hubungi Kami</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="mailto:tintadigital69@gmail.com">tintadigital69@gmail.com</a><br>Jakarta &amp; Yogyakarta, Indonesia</p>
+<div class="pt-2">
+<span class="inline-block bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full">Studio Terbuka</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 TINTA DIGITAL. All rights reserved.</p>
+<div class="flex items-center gap-6 font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#faq" data-nav="faq">Kebijakan Privasi</a>
+<a class="hover:text-primary transition-colors" href="#faq" data-nav="faq">Syarat &amp; Ketentuan</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

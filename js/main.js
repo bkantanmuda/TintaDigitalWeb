@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  var WA_NUMBER = '6281234567890';
+  var WA_NUMBER = '6281226099132';
 
   /* ---------- 1. FAQ accordion (satu terbuka) ---------- */
   var faqBtns = document.querySelectorAll('.faq-btn');

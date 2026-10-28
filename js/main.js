@@ -45,6 +45,121 @@
   var lastLoadedProducts = null;
   var isFetching = false;
 
+  var DEFAULT_PRODUCTS = [
+    {
+      id: '1',
+      nama: 'Belajar Huruf A-Z',
+      harga: '8000',
+      formattedHarga: 'Rp 8.000',
+      sampul: 'Thumbnail/belajar huruf A-Z.jpg',
+      fallbackSampul: 'Thumbnail/belajar huruf A-Z.jpg',
+      link: 'http://lynk.id/tinta_digital/kxmwl1nvwp5m',
+      isValidLink: true,
+      categoryTags: ['tracing', 'huruf'],
+      categoryLabel: 'Tracing & Huruf',
+      badge: 'Bestseller',
+      deskripsi: 'Modul latihan interaktif tracing dan mengenal huruf A sampai Z lengkap untuk melatih motorik halus anak.'
+    },
+    {
+      id: '2',
+      nama: 'Belajar Huruf - Nama Hewan',
+      harga: '8000',
+      formattedHarga: 'Rp 8.000',
+      sampul: 'Thumbnail/Belajar Huruf - Nama Hewan.jpg',
+      fallbackSampul: 'Thumbnail/Belajar Huruf - Nama Hewan.jpg',
+      link: 'http://lynk.id/tinta_digital/p2mqkpxx8y25',
+      isValidLink: true,
+      categoryTags: ['huruf'],
+      categoryLabel: 'Mengenal Huruf',
+      badge: '',
+      deskripsi: 'Mengenal huruf alfabet dipadukan dengan nama dan gambar hewan lucu untuk mengasah kosa kata anak.'
+    },
+    {
+      id: '3',
+      nama: 'Belajar Pertambahan & Pengurangan',
+      harga: '8000',
+      formattedHarga: 'Rp 8.000',
+      sampul: 'Thumbnail/Belajar Pertambahan dan Pengurangan.jpeg',
+      fallbackSampul: 'Thumbnail/Belajar Pertambahan dan Pengurangan.jpeg',
+      link: 'http://lynk.id/tinta_digital/gdeono4x1rle',
+      isValidLink: true,
+      categoryTags: ['angka'],
+      categoryLabel: 'Mengenal Angka',
+      badge: '',
+      deskripsi: 'Lembar kerja berhitung pertambahan dan pengurangan dasar dengan visual interaktif yang mudah dipahami.'
+    },
+    {
+      id: '4',
+      nama: 'Belajar Perkalian dan Pembagian',
+      harga: '8000',
+      formattedHarga: 'Rp 8.000',
+      sampul: 'Thumbnail/Belajar Perkalian dan Pembagian.jpeg',
+      fallbackSampul: 'Thumbnail/Belajar Perkalian dan Pembagian.jpeg',
+      link: 'http://lynk.id/tinta_digital/rymd0dd96elj',
+      isValidLink: true,
+      categoryTags: ['angka'],
+      categoryLabel: 'Mengenal Angka',
+      badge: '',
+      deskripsi: 'Modul latihan dasar perkalian dan pembagian matematika untuk melatih logika dan pemahaman berhitung.'
+    },
+    {
+      id: '5',
+      nama: 'Mewarnai Hewan Laut',
+      harga: '5000',
+      formattedHarga: 'Rp 5.000',
+      sampul: 'Thumbnail/Mewarnai Hewan Laut.jpeg',
+      fallbackSampul: 'Thumbnail/Mewarnai Hewan Laut.jpeg',
+      link: 'http://lynk.id/tinta_digital/12g3e3e77lyj',
+      isValidLink: true,
+      categoryTags: ['mewarnai'],
+      categoryLabel: 'Mewarnai',
+      badge: '',
+      deskripsi: 'Buku aktivitas mewarnai beraneka fauna bawah laut dengan garis tebal yang ramah untuk anak-anak.'
+    },
+    {
+      id: '6',
+      nama: 'Bundle Belajar Matematika',
+      harga: '12000',
+      formattedHarga: 'Rp 12.000',
+      sampul: 'Thumbnail/Bundle Belajar Matematika.jpeg',
+      fallbackSampul: 'Thumbnail/Bundle Belajar Matematika.jpeg',
+      link: 'http://lynk.id/tinta_digital/n1m23dkk125e',
+      isValidLink: true,
+      categoryTags: ['angka', 'bundle'],
+      categoryLabel: 'Bundle & Angka',
+      badge: 'Paket Hemat',
+      deskripsi: 'Paket hemat komplit belajar matematika anak, dari pengenalan angka, penjumlahan, hingga perkalian.'
+    },
+    {
+      id: '7',
+      nama: 'Bundle Belajar Menulis',
+      harga: '12000',
+      formattedHarga: 'Rp 12.000',
+      sampul: 'Thumbnail/Bundle Belajar Menulis.jpeg',
+      fallbackSampul: 'Thumbnail/Bundle Belajar Menulis.jpeg',
+      link: 'http://lynk.id/tinta_digital/e1wg7048g0jk',
+      isValidLink: true,
+      categoryTags: ['tracing', 'huruf', 'bundle'],
+      categoryLabel: 'Bundle & Tracing',
+      badge: 'Bestseller',
+      deskripsi: 'Paket hemat komplit modul latihan menulis, tracing garis, dan mengenal huruf untuk kesiapan belajar anak.'
+    },
+    {
+      id: '8',
+      nama: 'Lembar Mewarnai anak-anak',
+      harga: '10000',
+      formattedHarga: 'Rp 10.000',
+      sampul: 'Thumbnail/Lembar Mewarnai anak-anak.jpeg',
+      fallbackSampul: 'Thumbnail/Mewarnai Hewan Laut.jpeg',
+      link: 'http://lynk.id/tinta_digital/1k8lnl2y6vlv',
+      isValidLink: true,
+      categoryTags: ['mewarnai'],
+      categoryLabel: 'Mewarnai',
+      badge: '',
+      deskripsi: 'Buku aktivitas mewarnai beraneka gambar lucu dengan garis tebal yang ramah untuk anak-anak.'
+    }
+  ];
+
   function formatPrice(harga) {
     if (harga === null || harga === undefined || harga === '') return '';
     var str = String(harga).trim();
@@ -100,7 +215,6 @@
     var katIdx = headers.indexOf('kategori');
     var badgeIdx = headers.indexOf('badge');
 
-    // Fallback column positions if standard headers aren't explicitly named
     if (namaIdx === -1) namaIdx = 1;
     if (hargaIdx === -1) hargaIdx = 2;
     if (sampulIdx === -1) sampulIdx = 3;
@@ -113,7 +227,7 @@
       if (!row || !row.length) continue;
 
       var rawNama = row[namaIdx] ? String(row[namaIdx]).trim() : '';
-      if (!rawNama) continue; // Skip empty rows
+      if (!rawNama) continue;
 
       var rawHarga = hargaIdx !== -1 && row[hargaIdx] ? String(row[hargaIdx]).trim() : '';
       var rawSampul = sampulIdx !== -1 && row[sampulIdx] ? String(row[sampulIdx]).trim() : '';
@@ -304,57 +418,14 @@
     }
   }
 
-  function showErrorState(msg) {
-    var grid = document.getElementById('printable-grid');
-    if (!grid) return;
-    grid.innerHTML = '';
-    var errBox = document.createElement('div');
-    errBox.className = 'col-span-full p-8 text-center bg-surface-container-lowest rounded-xl shadow-sm space-y-3';
-
-    var icon = document.createElement('span');
-    icon.className = 'material-symbols-outlined text-[36px] text-error';
-    icon.textContent = 'warning';
-    errBox.appendChild(icon);
-
-    var text = document.createElement('p');
-    text.className = 'font-body-md text-body-md text-on-surface-variant max-w-md mx-auto';
-    text.textContent = msg || 'Gagal memuat produk dari Google Sheets. Silakan periksa koneksi internet Anda.';
-    errBox.appendChild(text);
-
-    var retryBtn = document.createElement('button');
-    retryBtn.type = 'button';
-    retryBtn.className = 'inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg text-label-lg px-5 py-2.5 rounded-lg hover:bg-primary transition-colors mt-2';
-    retryBtn.innerHTML = '<span>Coba Lagi</span><span class="material-symbols-outlined text-[18px]">refresh</span>';
-    retryBtn.onclick = function () {
-      fetchCatalogFromGoogleSheets();
-    };
-    errBox.appendChild(retryBtn);
-
-    grid.appendChild(errBox);
-  }
-
-  function showEmptyState() {
-    var grid = document.getElementById('printable-grid');
-    if (!grid) return;
-    grid.innerHTML = '';
-    var emptyBox = document.createElement('div');
-    emptyBox.className = 'col-span-full p-8 text-center bg-surface-container-lowest rounded-xl shadow-sm space-y-2';
-    emptyBox.innerHTML = '<span class="material-symbols-outlined text-[36px] text-secondary">inventory_2</span>' +
-      '<p class="font-body-md text-body-md text-on-surface-variant">Belum ada produk printable yang tersedia saat ini.</p>';
-    grid.appendChild(emptyBox);
-  }
-
   function renderCatalog(products) {
     var grid = document.getElementById('printable-grid');
     if (!grid) return;
 
-    if (!products || !products.length) {
-      showEmptyState();
-      return;
-    }
+    var list = (products && products.length > 0) ? products : DEFAULT_PRODUCTS;
 
     grid.innerHTML = '';
-    products.forEach(function (prod) {
+    list.forEach(function (prod) {
       var cardEl = createProductCard(prod);
       grid.appendChild(cardEl);
     });
@@ -386,9 +457,10 @@
     var range = cfg.range || 'A1:Z100';
     var apiKey = cfg.apiKey || 'AIzaSyBW5fhgcToqT0Resjd0qJ3F9pIo-3ZbT5g';
 
+    var rangeParam = sheetName + '!' + range;
     var url = 'https://sheets.googleapis.com/v4/spreadsheets/' +
               encodeURIComponent(spreadsheetId) +
-              '/values/' + encodeURIComponent(sheetName + '!' + range) +
+              '/values/' + encodeURIComponent(rangeParam) +
               '?key=' + encodeURIComponent(apiKey);
 
     if (!lastLoadedProducts) {
@@ -398,7 +470,7 @@
     fetch(url)
       .then(function (res) {
         if (!res.ok) {
-          throw new Error('Google Sheets API response status: ' + res.status);
+          throw new Error('HTTP ' + res.status + ' ' + res.statusText);
         }
         return res.json();
       })
@@ -406,14 +478,20 @@
         isFetching = false;
         var rows = data.values || [];
         var products = parseGoogleSheetsRows(rows);
-        lastLoadedProducts = products;
-        renderCatalog(products);
+        if (products && products.length > 0) {
+          lastLoadedProducts = products;
+          renderCatalog(products);
+        } else {
+          lastLoadedProducts = DEFAULT_PRODUCTS;
+          renderCatalog(DEFAULT_PRODUCTS);
+        }
       })
       .catch(function (err) {
         isFetching = false;
-        console.error('TINTA DIGITAL — Google Sheets Catalog Error:', err);
+        console.warn('TINTA DIGITAL — Google Sheets API notice:', err.message || err, '- Using fallback catalog.');
         if (!lastLoadedProducts) {
-          showErrorState('Gagal memuat katalog produk dari Google Sheets.');
+          lastLoadedProducts = DEFAULT_PRODUCTS;
+          renderCatalog(DEFAULT_PRODUCTS);
         }
       });
   }
